@@ -1893,3 +1893,8 @@ pub fn hasExtension(extension: [:0]const u8) bool {
     }
     return false;
 }
+
+pub fn generateMipmap(target: TextureTarget) void {
+    c.glGenerateMipmap(@enumToInt(target));
+    checkError();
+}
